@@ -13,8 +13,7 @@ On each invocation of the application, you need to store to RavenDB all new file
 The amount of work required per run is proportional to the number of changes that happened to the files on the folder and not to the total number of files. <br />
 In other words, if the folder contains 10,000 files and only 5 of them changed since the last invocation, It deoesn't read 10,000 documents from RavenDB to compare them.<br />
 The files in the folder are modified by a 3rd party process over which you have no control.<br />
-It assumes that files aren’t being modified while you are running the application, but you can make no assumptions about the state of the files between invocation of the application.
-<br />
+It assumes that files aren’t being modified while you are running the application.<br />
 <br />
 * C# & .Net 6.0 Application <br />
 * Used RavenDB.Client (nuget) dependency.<br />
