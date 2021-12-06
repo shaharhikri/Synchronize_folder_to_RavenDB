@@ -9,11 +9,11 @@ The application accepts three arguments:<br />
 ●	The URL of the RavenDB server<br />
 ●	The database name to use<br />
 You need to check only the files in the provided folder, you can assume that there are no subfolders in the specified folder.<br />
-On each invocation of the application, you need to store to RavenDB all new files that does not exists already in the database, delete documents that represent files that were removed on the folder and update any document that was changed since it the last update.<br /><br />
-The amount of work required per run should be proportional to the number of changes that happened to the files on the folder and not to the total number of files. <br />
-In other words, if the folder contains 10,000 files and only 5 of them changed since the last invocation, you cannot read 10,000 documents from RavenDB to compare them.<br />
-The files in the folder are modified by a 3rd party process over which you have no control. You can assume that files aren’t being modified while you are running the application, 
-but you can make no assumptions about the state of the files between invocation of the application.
+On each invocation of the application, you need to store to RavenDB all new files that does not exists already in the database, delete documents that represent files that were removed on the folder and update any document that was changed since it the last update.<br />
+The amount of work required per run is proportional to the number of changes that happened to the files on the folder and not to the total number of files. <br />
+In other words, if the folder contains 10,000 files and only 5 of them changed since the last invocation, It deoesn't read 10,000 documents from RavenDB to compare them.<br />
+The files in the folder are modified by a 3rd party process over which you have no control.<br />
+It assumes that files aren’t being modified while you are running the application, but you can make no assumptions about the state of the files between invocation of the application.
 <br />
 <br />
 * C# & .Net 6.0 Application <br />
