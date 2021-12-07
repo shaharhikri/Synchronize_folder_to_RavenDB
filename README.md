@@ -9,7 +9,7 @@ The application accepts three arguments:<br />
 ●	The URL of the RavenDB server<br />
 ●	The database name to use<br />
 <br />
-****Json's have to contain 'Id' property (attribute)****
+****Json's have to contain 'Id' property (attribute)****<br />
 <br />
 App check only the files in the provided folder, and assumes that there are no subfolders in the specified folder.<br />
 On each invocation of the application, you need to store to RavenDB all new files that does not exists already in the database, delete documents that represent files that were removed on the folder and update any document that was changed since it the last update.<br />
