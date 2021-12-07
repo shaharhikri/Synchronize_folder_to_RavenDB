@@ -8,7 +8,10 @@ The application accepts three arguments:<br />
 ●	The path to the folder to sync<br />
 ●	The URL of the RavenDB server<br />
 ●	The database name to use<br />
-You need to check only the files in the provided folder, you can assume that there are no subfolders in the specified folder.<br />
+<br />
+****Json's have to contain 'Id' property (attribute)****
+<br />
+App check only the files in the provided folder, and assumes that there are no subfolders in the specified folder.<br />
 On each invocation of the application, you need to store to RavenDB all new files that does not exists already in the database, delete documents that represent files that were removed on the folder and update any document that was changed since it the last update.<br />
 The amount of work required per run is proportional to the number of changes that happened to the files on the folder and not to the total number of files. <br />
 In other words, if the folder contains 10,000 files and only 5 of them changed since the last invocation, It deoesn't read 10,000 documents from RavenDB to compare them.<br />
