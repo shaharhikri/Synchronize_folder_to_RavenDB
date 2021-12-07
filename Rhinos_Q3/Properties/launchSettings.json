@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Rhinos_Q3": {
+      "commandName": "Project",
+      "commandLineArgs": "C:/Users/Shahar/Desktop/ http://live-test.ravendb.net ShaharHikriDB"
+    }
+  }
+}
